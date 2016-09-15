@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>layout</title>
+	<style>
+		html,body{
+			margin: 0;
+		}
+		#a{
+			float: left;
+			width: 200px;
+			height: auto;
+			min-height: 200px;
+			background-color: #4eb3b9;
+		}
+		#b{
+			position: absolute;
+			margin-left: 200px;
+			float: left;
+			width: 100%;
+			height: auto;
+			min-height: 200px;
+			background-color: #ff0097;
+		}
+	</style>
+</head>
+<body>
+	<!-- 如何通过 CSS 实现一个左边固定宽度，右边自适应的两列布局 -->
+	<div id="a"></div>
+	<div id="b"></div>
+</body>
+</html>
