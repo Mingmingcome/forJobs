@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	/* 
+		网龙网络前端笔试题
+		var data = {a:{b:{c:'101.com'}}};
+		console.log(getValue('a.b.c',data))===101.com;
+	*/
+		function getValue(keys,data) {
+			var arr = keys.split(".");
+			var a,tmp='data';
+			for(a in arr){
+				tmp +='.'+arr[a];
+			}
+			var result= eval(tmp);
+			return result;
+		}
+		var data = {a:{b:{c:'101.com'}}};
+		console.log(getValue('a.b.c',data));
+	</script>
+</body>
+</html>
