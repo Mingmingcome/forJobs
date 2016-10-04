@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>左侧固定宽度，右侧自适应</title>
+	<title>右侧固定宽度，左侧自适应</title>
 	<style>
 		html,body,div,p{
 			margin: 0;
@@ -17,35 +17,33 @@
 			margin: 10px;
 		}
 		.left{
-			position: relative;
 			float: left;
-			width: 200px;
-			height: 160px;
-			margin-right:-200px;
-			background-color: #4eb3b9;
-		}
-		.right{
-			float: right;
 			width: 100%;
 			height: 160px;
-			background-color: #ff0097;			
+			background-color: #4eb3b9;
 		}
 		.responsive{
-			margin-left: 200px;
+			margin-right: 200px;
+		}
+		.right{
+			position: relative;
+			float: right;
+			width: 200px;
+			height: 160px;
+			margin-left: -200px;
+			background-color: #ff0097;
 		}
 	</style>
 </head>
 <body>
-	<!-- 如何通过 CSS 实现一个左边固定宽度，右边自适应的两列布局 -->
-	<!-- 源地址：http://nec.netease.com/library/101023 -->
 	<div class="wrap">
 		<div class="left">
-			<p>左侧固定宽度</p>
+			<div class="responsive">
+				<p>左侧自适应</p>
+			</div>
 		</div>
 		<div class="right">
-			<div class="responsive">
-				<p>右侧自适应</p>
-			</div>
+			<p>右侧固定宽度</p>
 		</div>
 	</div>
 </body>
