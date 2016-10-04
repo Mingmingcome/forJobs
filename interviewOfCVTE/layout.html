@@ -4,31 +4,49 @@
 	<meta charset="UTF-8">
 	<title>layout</title>
 	<style>
-		html,body{
+		html,body,p,div{
 			margin: 0;
-			overflow: hidden;
+			padding: 0;
 		}
-		#a{
+		.wrap{
+			margin: 10px;
+		}
+		.left{
+			position: relative;
 			float: left;
 			width: 200px;
-			height: auto;
-			min-height: 200px;
+			height: 160px;
+			margin-right:-200px;
 			background-color: #4eb3b9;
 		}
-		#b{
-			position: absolute;
-			margin-left: 200px;
-			float: left;
+		.right{
+			float: right;
 			width: 100%;
-			height: auto;
-			min-height: 200px;
-			background-color: #ff0097;
+			height: 160px;
+			background-color: #ff0097;			
+		}
+		.responsive{
+			margin-left: 200px;
+		}
+		p{
+			font-family: "Microsoft Yahei";
+			padding: 10px;
+			color: #fff;
 		}
 	</style>
 </head>
 <body>
 	<!-- 如何通过 CSS 实现一个左边固定宽度，右边自适应的两列布局 -->
-	<div id="a"></div>
-	<div id="b"></div>
+	<!-- 源地址：http://nec.netease.com/library/101023 -->
+	<div class="wrap">
+		<div class="left">
+			<p>左侧固定宽度</p>
+		</div>
+		<div class="right">
+			<div class="responsive">
+				<p>右侧自适应</p>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
