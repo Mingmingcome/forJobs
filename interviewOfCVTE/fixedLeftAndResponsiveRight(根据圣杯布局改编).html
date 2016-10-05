@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>左侧固定宽度，右侧自适应</title>
+	<style>
+		html,body,div,p{
+			margin: 0;
+			padding: 0;
+		}
+		.left,.container,.right{
+			position: relative;
+			float: left;
+		}
+		.container{
+			padding-left: 200px;
+		}
+		.left{			
+			width: 200px;
+			margin-right: -100%;
+			right: 200px;
+			background-color: #4eb3b9;
+		}
+		.right{
+			width: 100%;
+			background-color: #ff0097; 
+		}
+	</style>
+</head>
+<body>
+	<!-- 这个是按照圣杯布局的方法写的左边固定宽度，右边自适应 -->
+	<!-- 源地址：http://alistapart.com/article/holygrail -->
+	<div class="container">
+		<div class="left">左侧固定宽度左侧固定宽度左侧固定宽度左侧固定宽度左侧固定宽度</div>
+		<div class="right">右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应右侧自适应</div>
+	</div>
+</body>
+</html>
