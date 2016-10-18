@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>absolute布局上下文下的水平垂直居中(absolute + margin:auto)</title>
+	<style>
+	/*w3c.org中有这样一句话：
+
+The constraint that determines the used values for these elements is:
+'left' + 'margin-left' + 'border-left-width' + 'padding-left' + 'width' + 'padding-right' + 'border-right-width' + 'margin-right' + 'right' = width of containing block
+
+这句话说的是absolute性质的盒子，它的包含块的宽度等于它的盒模型的宽度 + left + right值，包含块的高度同理，盒模型包括margin-box、border-box、padding-box、content-box，而在这个居中方法中，.content的left + right值是0，width是定值，width所在盒子包括了除了margin-box外的那三个box，margin都是auto值，按照上面那个公式，margin-left + margin-right的值应该等于包含块的宽度 - left的值 - right的值 - width的值，也就是说margin-left + margin-right的值等于除了width所占宽度外的剩下宽度，拥有剩下宽度后，就是平分其宽度，以让左右两边相等，达到居中，标准中给出了答案：
+
+If none of the three is 'auto': If both 'margin-left' and 'margin-right' are 'auto', solve the equation under the extra constraint that the two margins get equal values, unless this would make them negative, in which case when direction of the containing block is 'ltr' ('rtl'), set 'margin-left' ('margin-right') to zero and solve for 'margin-right' ('margin-left')
+这里的"three"指的是left, width, right。如果left、right和width都不为auto，同时margin-left和margin-right都是auto，除非特别情况，它们俩就是相等的，而这个例子中不在特殊情况之列，因此两者平分，此时达到了水平居中。
+*/
+
+		html,body{
+			width: 100%;
+			height: 100%;
+			margin: 0;
+		}
+
+		.wrap{
+			position: relative;
+			width: 100%;
+			height: 100%;
+			background-color: #ccc;
+		}
+
+		.content{
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			width: 100px;
+			height: 100px;
+			background: #333;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="content">
+			
+		</div>
+	</div>
+</body>
+</html>

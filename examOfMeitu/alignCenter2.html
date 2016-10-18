@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>利用盒模型的水平垂直居中(padding填充)</title>
+	<style>
+		/* css3的calc()动态计算 */
+		html{
+			font-family: "Microsoft Yahei";
+			color: white;
+		}
+		
+		.wrap{
+			margin-top: 20px;
+			margin-left: auto;
+			margin-right: auto;
+			width: 400px;
+			height: 400px;
+			background-color: #ccc;
+		}
+		.content{
+			padding: -webkit-calc((100% - 100px) / 2);
+			padding: calc((100% - 100px) / 2);
+			width: 100px;
+			height: 100px;
+			background-color: #333;
+			background-clip: content-box;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="content">
+			水平垂直居中
+		</div>
+	</div>
+</body>
+</html>

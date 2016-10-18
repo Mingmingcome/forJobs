@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>absolute布局上下文下的水平垂直居中(text-align: center + absolute)</title>
+	<style>
+		html, body{
+			font-family: "Microsoft Yahei";
+			color: #fff;
+		}
+
+		.wrap{
+			text-align: center;
+
+			width: 100%;
+			height: 400px;
+			background-color: #ccc;
+			font-size: 0;
+		}
+
+		.content{
+			/* 当absolute元素为inline-block的时候，它会受到文本的影响，然后你可能会问这里没文本啊，我只能告诉你说这下面是有的，是个匿名的文本节点。
+			然后这个匿名文本由于受到text-align:center影响居中了，这个时候absolute盒子的左边跟父容器的中点对齐了，所以就还需要往回拉50%，这里用的是margin-left，你也可以用其它方式拉。然后就是垂直方向的对齐，垂直方向是不能被操作文本的属性影响的，所以我这里用的是margin-top来让它偏移下去。*/
+
+			position: absolute;			
+			margin-left: -50px;
+			/* 150px = (400px - 100px)/2 */
+			margin-top: 150px;
+			width: 100px;
+			height: 100px;
+			display: inline-block;
+			background-color: #333;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="content">
+			
+		</div>
+	</div>
+</body>
+</html>
