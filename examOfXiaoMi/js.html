@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function compare(string1,string2){
+			var arr1 = string1.match(/./g).sort().toString();
+			var arr2 = string2.match(/./g).sort().toString();
+
+			if( arr1 == arr2) return true;
+			else return false;
+		}
+		console.log(compare("asdfghj4@254kl","lk4254jhgf@dsa"));
+	</script>
+</body>
+</html>

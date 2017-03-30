@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>小米笔试</title>
+</head>
+<body>
+	<script>
+      /* 
+            输入：hello xiao mi
+            输出：mi xiao hello
+      */
+	function(){
+      	var line;
+      	var output;
+      	while(read_line()){
+            var line = read_line();
+            line = line.split(" ").reverse();
+            var len = line.length;
+			for(var i = 0;i<len;i++){
+                  if(i=0) output += line[i];
+                  else output = ' '+line[i];
+            }
+            print(output);
+		}
+	}
+
+	
+
+      	var line;
+      	var output;
+      	while(line=read_line()){
+            line = line.split(" ").reverse();
+            var len = line.length;
+			for(var i = 0;i<len;i++){
+                  if(i==0) output += line[i];
+                  else output = ' '+line[i];
+            }
+            print(output);
+            line.splice(0,len);
+              output= '';
+		}
+
+	</script>
+</body>
+</html>

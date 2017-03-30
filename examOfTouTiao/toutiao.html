@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function test(m,n){
+		var len = m;
+	    var arr = [];
+	    for(var i=1;i<=len;i++){
+	    	if(i>10){
+	    		var index = Math.floor(i/10);
+	    		console.log(index);
+	    		index = arr.indexOf(index);
+	    		for(var j=0;j<10&&i<=len;j++){
+	    			arr.splice(index++,0,i++);
+	    		}
+	    	}
+	    	else{
+	    		arr.push(i);
+	    	}
+	    }
+	    console.log(arr);
+	    console.log(arr.indexOf(1));
+	    return arr[n-1];
+		}
+	</script>
+</body>
+</html>
